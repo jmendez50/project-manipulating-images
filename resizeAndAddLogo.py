@@ -8,9 +8,9 @@ logoIm = Image.open( LOGO_FILENAME )
 logoWidth, logoHeight = logoIm.size
 
 os.makedirs('withLogo', exist_ok=True)
-for filename in os.listdir('originals'):
-    if not (filename.endswith('.jpg') or filename.endswith('.png'))\
-        or filename == LOGO_FILENAME:
+for filename in os.listdir('originals/'):
+    if not (filename.endswith('.jpg'))\
+        or filename == (''):
             continue
     im = Image.open('./originals/' + filename)
     width, height = im.size
